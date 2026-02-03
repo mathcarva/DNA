@@ -7,29 +7,26 @@
 <link rel="icon" href="/favicon.png"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 <!-- CSS -->
-
-
-
-
-
-
-
-
-
+<link rel="stylesheet" href="/css/menu.css"/>
+<link rel="stylesheet" href="/css/geral.css"/>
+<link rel="stylesheet" href="/css/banner.css"/>
+<link rel="stylesheet" href="/css/metricas.css"/>
+<link rel="stylesheet" href="/css/botao.css"/>
+<link rel="stylesheet" href="/css/equipe.css"/>
+<link rel="stylesheet" href="/css/services.css"/>
+<link rel="stylesheet" href="/css/destaque.css"/>
+<link rel="stylesheet" href="/css/footer.css"/>
 <!-- JS -->
-
-
-
-
-
+<script type="module" src="/src/main.js"></script>
+<script type="module" src="/javaScript/menu.js"></script>
+<script type="module" src="/javaScript/contador.js"></script>
+<script type="module" src="/javaScript/fadein.js"></script>
+<script type="module" src="/javaScript/unhover.js"></script>
 
 <style>
 
 </style>
 
-  <script type="module" crossorigin src="/assets/index.c38ca499.js"></script>
-  <link rel="modulepreload" href="/assets/vendor.4cc07999.js">
-  <link rel="stylesheet" href="/assets/index.7b64be0f.css">
 </head>
 <body>
 
@@ -51,7 +48,7 @@
 <!-- MENU -->
 <div class="cabecalho" >
   <div class="row">
-    <a href="#" class="logo">DNA CAPITAL<img src="data:image/png;base64,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"></a>
+    <a href="#" class="logo">DNA CAPITAL<img src="src/assets/dna-logo.png"></a>
     <div class="menuzito">
       <p id="menuText">MENU</p>
       <div class="square">
@@ -182,7 +179,7 @@
     <div class="footerRow">
       <div class="footerMenu">
         <ul>
-          <li><a href="#" class="logo">DNA CAPITAL<img src="data:image/png;base64,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"></a></li>
+          <li><a href="#" class="logo">DNA CAPITAL<img src="src/assets/dna-logo.png"></a></li>
         </ul>
         <ul>
           <li><a href="#">Our DNA</a></li>
