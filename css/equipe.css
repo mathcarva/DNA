@@ -1,0 +1,72 @@
+.equipe{
+  display: flex;
+  width: 100%;
+  @media (max-width:900px){
+    flex-direction: column;
+    gap: 150px;
+  }
+}
+.teamImage{
+  height: clamp(340px, 30vmax, 600px);
+  width: 100%;
+  margin-top: 40px;
+   @media (max-width:900px){
+    width: 60%;
+    min-width: 400px;
+    max-width: 90vw;
+    margin-left: 30px;
+  }
+}
+.teamImage img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.equipeContainer{
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: aliceblue;
+  overflow: visible;
+  padding: 30px;
+}
+
+.equipeContainer::after {
+  content: '';
+  position: absolute;
+  top: -10;
+  left: -10;
+  width: 120%;
+  height: 100%;
+  opacity: .3;
+  background-image: linear-gradient(90deg, rgba(77, 71, 109, 1) 0%, rgba(32, 32, 40, 0.411) 100%);
+  pointer-events: none; 
+  z-index: -1;
+  @media (max-width:900px){
+    width: 90%;
+  }
+}
+
+.equipeRow{
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  gap: 60px;
+}
+
+.equipeRow h1{
+  font-family: "Playfair Display", sans-serif;
+  font-size: clamp(20px, 4vmax, 120px);
+  font-weight: 100;
+}
+
+.equipeRow p{
+  font-family: "Quicksand", sans-serif;
+  font-size: clamp(16px, 1vmax, 25px);
+  color: #ffffff;
+  opacity: .7;
+}

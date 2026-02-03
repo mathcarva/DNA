@@ -1,0 +1,135 @@
+
+/*--------------------BOTÂO---------------------------*/
+.botao{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+  margin-left: 200px;
+}
+
+.btn2 {
+  position: relative;
+  display: inline-block;
+  padding: 15px 30px;
+  color: #fefefe;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 5px;
+  font-family: "Quicksand", sans-serif;
+  font-size: clamp(10px, 1vmax, 15px);
+  background-color: transparent;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.line {
+  position: absolute;
+  background-color: #1954EC;
+}
+.btn3 .line{
+  background-color: #73737c;
+}
+/* Lados */
+.top, .bottom {
+  height: 2px;
+  width: 100%;
+}
+.btn2.hovered .top {
+  transform: translateX(100%);
+}
+.top2, .bottom2 {
+  height: 2px;
+  width: 100%;
+}
+.btn2.hovered .bottom {
+  transform: translateX(-100%);
+}
+.left, .right {
+  width: 2px;
+  height: 100%;
+}
+.btn2.hovered .right {
+  transform: translateY(200%);
+}
+.btn2.hovered .left {
+  transform: translateY(-200%);
+}
+/* Posição inicial */
+.top {
+  top: 0;
+  left: 60%;
+  transform: translateX(1);
+  transition: transform 0.5s ease;
+}
+.top2 {
+  top: 0;
+  left: -100%;
+  transform: translateX(1);
+  transition: transform .5s ease;
+  transition-delay: .3s;
+}
+.right {
+  top: -100%;
+  right: 0;
+  transform: translateY(1);
+  transition: transform 0.5s ease;
+}
+.bottom {
+  bottom: 0;
+  right: 60%;
+  transform: translateX(1);
+  transition: transform 0.5s ease;
+}
+.bottom2 {
+  bottom: 0;
+  right: -100%;
+  transform: translateX(1);
+  transition: transform .5s ease;
+  transition-delay: .3s;
+}
+.left {
+  bottom: -100%;
+  left: 0;
+  transform: translateY(1);
+  transition: transform 0.5s ease;
+}
+
+/* Animação no hover */
+.btn2:hover .top {
+  transform: translateX(100%);
+}
+
+.btn2:hover .top2 {
+  transform: translateX(160%);
+}
+
+.btn2:hover .right {
+  transform: translateY(200%);
+}
+
+.btn2:hover .bottom {
+  transform: translateX(-100%);
+}
+
+.btn2:hover .bottom2 {
+  transform: translateX(-160%);
+}
+
+.btn2:hover .left {
+  transform: translateY(-200%);
+}
+
+/* Unhover: volta com delay */
+.btn2.unhovered .top,
+.btn2.unhovered .bottom  {
+  transition-delay: 0.6s;
+  transform: translateX(0);
+}
+
+.btn2.unhovered .left,
+.btn2.unhovered .right {
+  transition-delay: 0.6s;
+  transform: translateY(0);
+}

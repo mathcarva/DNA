@@ -1,0 +1,26 @@
+.destaque{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin-top: 200px;
+  justify-content: center;
+  background-color: rgba(25, 84, 236, 1);
+  background-image: linear-gradient(108deg, rgba(25, 84, 236, 1) 0%, rgba(16, 72, 224, 1) 100%);
+}
+
+.destaque div{
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.destaque h1{
+  margin: 10vw 0;
+  text-align: left;
+  font-weight: 100;
+  font-size: clamp(20px, 5vmax, 80px);
+  color: #ffffff;
+  max-width: 80vw;
+}

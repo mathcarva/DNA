@@ -1,0 +1,195 @@
+/*------------------MÉTRICAS---------------------*/
+.metricas{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: center;
+  margin-top: 70vh;
+  color: #ffffff;
+}
+@media (max-width: 1200px){
+  .metricas{
+    margin-top: 50vh;
+  }
+}
+@media (max-width: 900px){
+  .metricas{
+    margin-top: 20vh;
+  }
+}
+
+.porcentagem{
+  width: 50%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: "quicksand", sans-serif;
+  gap: 30px;
+  @media (max-width:900px){
+    width: 100%;
+    order: 2;
+  }
+}
+
+/*--------------------CIRCULO---------------------------*/
+.circle{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  border: 50%;
+  overflow: hidden;
+}
+
+.metricas .porcentagem h1 {
+  position: relative;
+  width: clamp(20px, 20vmax, 400px);
+  height: clamp(20px, 20vmax, 400px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: clamp(20px, 4vmax, 120px);
+  font-weight: 100;
+  color: #ffffff;
+  z-index: 0;
+  @media (max-width:900px){
+    width: clamp(20px, 27vmax, 400px);
+    height: clamp(20px, 27vmax, 400px);
+  }
+}
+
+.metricas .porcentagem h1::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 4px;
+  border-radius: inherit;
+  background: linear-gradient(161deg, rgba(0, 78, 215, 1) 0%, rgba(42, 183, 243, 1) 100%);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: -1;
+}
+.metricas .porcentagem .circle2 h1{
+   background:  linear-gradient(130deg, rgb(0, 255, 234) 30%, #0048ff 60%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* Para outros navegadores, adicionar a versão sem prefixo também pode ajudar */
+  background-clip: text;
+  color: transparent;
+}
+.metricas .porcentagem .circle2 h1::before{
+ background: linear-gradient(161deg, rgb(71, 71, 71) 40%, rgb(161, 161, 161) 100%);
+}
+
+.degrade-border {
+  position: relative;
+  border-radius: 50%;
+  background: white; /* ou o fundo do seu elemento */
+  z-index: 0;
+}
+
+.porcentagem p{
+  color: #ffffff;
+  opacity: .5;
+  font-size: clamp(15px, 1vmax, 20px);
+  margin-bottom: 6vmax;
+}
+
+/*--------------------DADOS---------------------------*/
+.dados{
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  @media (max-width:900px){
+    width: 100%;
+    margin-left: 15vw;
+    margin-bottom: 10vw;
+    order: 1;
+  }
+}
+
+.dados p br{
+  @media (max-width:900px){
+    display: none;
+  }
+}
+
+.dados h1{
+  font-family: "Playfair Display", sans-serif;
+  font-size: clamp(20px, 6vmax, 100px);
+  font-weight: 100;
+  color: #ffffff;
+  margin-top: 40px;
+  margin-bottom: 100px;
+}
+
+.dados p{
+  font-family: "Quicksand", sans-serif;
+  color: #ffffff;
+  opacity: .7;
+  font-size: clamp(16px, 2vmax, 25px);
+  max-width: 70vw;
+}
+
+/*--------------------EARLY/ LATE---------------------------*/
+
+.dados2{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 90vh;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  margin-bottom: 6vmax;
+  @media (max-width:900px){
+    order: 3;
+  }
+}
+
+.dados2 div{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  @media (max-width:900px){
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 30vw;
+  }
+}
+
+.dados2 h2{
+  font-family: "Playfair Display", sans-serif;
+  font-size: clamp(20px, 3.5vmax, 60px);
+  font-weight: 100;
+  display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+  @media (max-width:900px){
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.dados2 p br{
+  @media (max-width:900px){
+    display: none;
+  }
+}
+
+.dados2 p{
+  font-family: "Quicksand", sans-serif;
+  font-size: clamp(16px, 2vmax, 25px);
+  color: #ffffff;
+  opacity: .7;
+  max-width: 80vw;
+}
